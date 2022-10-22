@@ -1,0 +1,1 @@
+make SIM=questa GUI=1 "VSIM_ARGS=-t 1ps"
