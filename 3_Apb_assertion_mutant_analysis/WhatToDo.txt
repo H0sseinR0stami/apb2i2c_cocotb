@@ -1,3 +1,5 @@
+in "tb" folder open "tb.sv" and change the "NumberOfIputLines" parameter with the number of lines of "apb_input.txt" file in "input" folder
+
 move to script folder:
 
 run "1_basic_main.py" to remove Assertions which fail with original rtl simulation
