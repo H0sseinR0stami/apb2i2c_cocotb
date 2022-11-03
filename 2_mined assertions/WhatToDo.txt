@@ -1,0 +1,6 @@
+
+replace clk with PCLK
+
+delete .i2c
+
+rename it to "Apb_properties.sva" and move to "properties_sva" folder in "3_Apb_assertion_mutant_analysis"

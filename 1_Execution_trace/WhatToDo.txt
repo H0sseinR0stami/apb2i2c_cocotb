@@ -1,0 +1,11 @@
+Go to tb folder
+
+open anaconda command prompt or terminal and run " make SIM=Questa "  or " make SIM=Questa GUI=1 "VSIM_ARGS=-t 1ns"  "
+
+three files will be created in tb folder after simulation: "apb_input.txt" , "DUT_sub.vcd", "apb_input_output.txt"
+
+"apb_input_output.txt": is the input for assertion miner
+
+"apb_input.txt": is input for "3_Apb_assertion_mutant_analysis" and should be move to its "input" folder
+
+"DUT_sub.vcd": is the simulation VCD

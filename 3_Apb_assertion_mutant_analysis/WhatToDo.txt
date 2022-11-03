@@ -1,0 +1,7 @@
+move to script folder:
+
+run "1_basic_main.py" to remove Assertions which fail with original rtl simulation
+
+run "2_mutant_main.py" to perform mutant analysis
+
+results will on "final_reports" folder

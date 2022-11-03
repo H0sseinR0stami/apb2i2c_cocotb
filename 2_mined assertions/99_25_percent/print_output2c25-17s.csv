@@ -1,0 +1,509 @@
+
+property property_1;
+@(posedge PCLK)
+(PREADY)  |->  ($past(PRESETn,2)==1) && ($past(PADDR[31],2)==0) && ($past(PADDR[30],2)==0) && ($past(PADDR[29],2)==0) && ($past(PADDR[28],2)==0) && ($past(PADDR[27],2)==0) && ($past(PADDR[26],2)==0) && ($past(PADDR[25],2)==0) && ($past(PADDR[24],2)==0) && ($past(PADDR[23],2)==0) && ($past(PADDR[22],2)==0) && ($past(PADDR[21],2)==0) && ($past(PADDR[20],2)==0) && ($past(PADDR[19],2)==0) && ($past(PADDR[18],2)==0) && ($past(PADDR[17],2)==0) && ($past(PADDR[16],2)==0)
+endproperty
+
+property property_2;
+@(posedge PCLK)
+(!PREADY) |-> ($past(PRESETn,2)==1) && ($past(PADDR[31],2)==0) && ($past(PADDR[30],2)==0) && ($past(PADDR[29],2)==0) && ($past(PADDR[28],2)==0) && ($past(PADDR[27],2)==0) && ($past(PADDR[26],2)==0) && ($past(PADDR[25],2)==0) && ($past(PADDR[24],2)==0) && ($past(PADDR[23],2)==0) && ($past(PADDR[22],2)==0) && ($past(PADDR[21],2)==0) && ($past(PADDR[20],2)==0) && ($past(PADDR[19],2)==0) && ($past(PADDR[18],2)==0) && ($past(PADDR[17],2)==0) && ($past(PADDR[16],2)==0)
+endproperty
+
+property property_3;
+@(posedge PCLK)
+(PRESETn) && (!PADDR[31]) && (!PADDR[30]) && (!PADDR[29]) && (!PADDR[28]) && (!PADDR[27]) && (!PADDR[26]) && (!PADDR[25]) && (!PADDR[24]) && (!PADDR[23]) && (!PADDR[22]) && (!PADDR[21]) && (!PADDR[20]) && (!PADDR[19]) && (!PADDR[18]) && (!PADDR[17]) && (!PADDR[16]) |-> ##2  !PSLVERR;
+endproperty
+
+property property_4;
+@(posedge PCLK)
+(!PSLVERR) |-> ($past(PRESETn,2)==1) && ($past(PADDR[31],2)==0) && ($past(PADDR[30],2)==0) && ($past(PADDR[29],2)==0) && ($past(PADDR[28],2)==0) && ($past(PADDR[27],2)==0) && ($past(PADDR[26],2)==0) && ($past(PADDR[25],2)==0) && ($past(PADDR[24],2)==0) && ($past(PADDR[23],2)==0) && ($past(PADDR[22],2)==0) && ($past(PADDR[21],2)==0) && ($past(PADDR[20],2)==0) && ($past(PADDR[19],2)==0) && ($past(PADDR[18],2)==0) && ($past(PADDR[17],2)==0) && ($past(PADDR[16],2)==0)
+endproperty
+
+property property_5;
+@(posedge PCLK)
+(PRESETn) && (!PADDR[31]) && (!PADDR[30]) && (!PADDR[29]) && (!PADDR[28]) && (!PADDR[27]) && (!PADDR[26]) && (!PADDR[25]) && (!PADDR[24]) && (!PADDR[23]) && (!PADDR[22]) && (!PADDR[21]) && (!PADDR[20]) && (!PADDR[19]) && (!PADDR[18]) && (!PADDR[17]) && (!PADDR[16]) |-> ##2 INT_RX;
+endproperty
+
+property property_6;
+@(posedge PCLK)
+(INT_RX)  |->  ($past(PRESETn,2)==1) && ($past(PADDR[31],2)==0) && ($past(PADDR[30],2)==0) && ($past(PADDR[29],2)==0) && ($past(PADDR[28],2)==0) && ($past(PADDR[27],2)==0) && ($past(PADDR[26],2)==0) && ($past(PADDR[25],2)==0) && ($past(PADDR[24],2)==0) && ($past(PADDR[23],2)==0) && ($past(PADDR[22],2)==0) && ($past(PADDR[21],2)==0) && ($past(PADDR[20],2)==0) && ($past(PADDR[19],2)==0) && ($past(PADDR[18],2)==0) && ($past(PADDR[17],2)==0) && ($past(PADDR[16],2)==0)
+endproperty
+
+property property_7;
+@(posedge PCLK)
+(!INT_TX) |-> ($past(PRESETn,2)==1) && ($past(PADDR[31],2)==0) && ($past(PADDR[30],2)==0) && ($past(PADDR[29],2)==0) && ($past(PADDR[28],2)==0) && ($past(PADDR[27],2)==0) && ($past(PADDR[26],2)==0) && ($past(PADDR[25],2)==0) && ($past(PADDR[24],2)==0) && ($past(PADDR[23],2)==0) && ($past(PADDR[22],2)==0) && ($past(PADDR[21],2)==0) && ($past(PADDR[20],2)==0) && ($past(PADDR[19],2)==0) && ($past(PADDR[18],2)==0) && ($past(PADDR[17],2)==0) && ($past(PADDR[16],2)==0)
+endproperty
+
+property property_8;
+@(posedge PCLK)
+(INT_TX)  |->  ($past(PRESETn,2)==1) && ($past(PADDR[31],2)==0) && ($past(PADDR[30],2)==0) && ($past(PADDR[29],2)==0) && ($past(PADDR[28],2)==0) && ($past(PADDR[27],2)==0) && ($past(PADDR[26],2)==0) && ($past(PADDR[25],2)==0) && ($past(PADDR[24],2)==0) && ($past(PADDR[23],2)==0) && ($past(PADDR[22],2)==0) && ($past(PADDR[21],2)==0) && ($past(PADDR[20],2)==0) && ($past(PADDR[19],2)==0) && ($past(PADDR[18],2)==0) && ($past(PADDR[17],2)==0) && ($past(PADDR[16],2)==0)
+endproperty
+
+property property_9;
+@(posedge PCLK)
+(!SDA_ENABLE) |-> ($past(PRESETn,2)==1) && ($past(PADDR[31],2)==0) && ($past(PADDR[30],2)==0) && ($past(PADDR[29],2)==0) && ($past(PADDR[28],2)==0) && ($past(PADDR[27],2)==0) && ($past(PADDR[26],2)==0) && ($past(PADDR[25],2)==0) && ($past(PADDR[24],2)==0) && ($past(PADDR[23],2)==0) && ($past(PADDR[22],2)==0) && ($past(PADDR[21],2)==0) && ($past(PADDR[20],2)==0) && ($past(PADDR[19],2)==0) && ($past(PADDR[18],2)==0) && ($past(PADDR[17],2)==0) && ($past(PADDR[16],2)==0)
+endproperty
+
+property property_10;
+@(posedge PCLK)
+(SDA_ENABLE)  |->  ($past(PRESETn,2)==1) && ($past(PADDR[31],2)==0) && ($past(PADDR[30],2)==0) && ($past(PADDR[29],2)==0) && ($past(PADDR[28],2)==0) && ($past(PADDR[27],2)==0) && ($past(PADDR[26],2)==0) && ($past(PADDR[25],2)==0) && ($past(PADDR[24],2)==0) && ($past(PADDR[23],2)==0) && ($past(PADDR[22],2)==0) && ($past(PADDR[21],2)==0) && ($past(PADDR[20],2)==0) && ($past(PADDR[19],2)==0) && ($past(PADDR[18],2)==0) && ($past(PADDR[17],2)==0) && ($past(PADDR[16],2)==0)
+endproperty
+
+property property_11;
+@(posedge PCLK)
+(PREADY)  |->  ($past(PRESETn,2)==1) && ($past(PADDR[31],2)==0) && ($past(PADDR[30],2)==0) && ($past(PADDR[29],2)==0) && ($past(PADDR[28],2)==0) && ($past(PADDR[27],2)==0) && ($past(PADDR[26],2)==0) && ($past(PADDR[25],2)==0) && ($past(PADDR[24],2)==0) && ($past(PADDR[23],2)==0) && ($past(PADDR[22],2)==0) && ($past(PADDR[21],2)==0) && ($past(PADDR[20],2)==0) && ($past(PADDR[19],2)==0) && ($past(PADDR[18],2)==0) && ($past(PADDR[17],2)==0) && ($past(PADDR[16],2)==0)
+endproperty
+
+property property_12;
+@(posedge PCLK)
+(!PREADY) |-> ($past(PRESETn,2)==1) && ($past(PADDR[31],2)==0) && ($past(PADDR[30],2)==0) && ($past(PADDR[29],2)==0) && ($past(PADDR[28],2)==0) && ($past(PADDR[27],2)==0) && ($past(PADDR[26],2)==0) && ($past(PADDR[25],2)==0) && ($past(PADDR[24],2)==0) && ($past(PADDR[23],2)==0) && ($past(PADDR[22],2)==0) && ($past(PADDR[21],2)==0) && ($past(PADDR[20],2)==0) && ($past(PADDR[19],2)==0) && ($past(PADDR[18],2)==0) && ($past(PADDR[17],2)==0) && ($past(PADDR[16],2)==0)
+endproperty
+
+property property_13;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (!PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |-> ##2  !PSLVERR;
+endproperty
+
+property property_14;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (!PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (PWDATA[31]) |-> ##2  !PSLVERR;
+endproperty
+
+property property_15;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |-> ##2  !PSLVERR;
+endproperty
+
+property property_16;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |-> ##2  !PSLVERR;
+endproperty
+
+property property_17;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (PWDATA[31]) |-> ##2  !PSLVERR;
+endproperty
+
+property property_18;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (!PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |-> ##2 INT_RX;
+endproperty
+
+property property_19;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (!PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (PWDATA[31]) |-> ##2 INT_RX;
+endproperty
+
+property property_20;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |-> ##2 INT_RX;
+endproperty
+
+property property_21;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |-> ##2 INT_RX;
+endproperty
+
+property property_22;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (PWDATA[31]) |-> ##2 INT_RX;
+endproperty
+
+property property_23;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |-> ##2 INT_TX;
+endproperty
+
+property property_24;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |-> ##2 INT_TX;
+endproperty
+
+property property_25;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (PWDATA[31]) |-> ##2 INT_TX;
+endproperty
+
+property property_26;
+@(posedge PCLK)
+(!SDA_ENABLE) |-> ($past(PADDR[15],2)==0) && ($past(PADDR[14],2)==0) && ($past(PADDR[13],2)==0) && ($past(PADDR[12],2)==0) && ($past(PADDR[11],2)==0) && ($past(PADDR[10],2)==0) && ($past(PADDR[9],2)==0) && ($past(PADDR[8],2)==0) && ($past(PADDR[7],2)==0) && ($past(PADDR[6],2)==0) && ($past(PADDR[5],2)==0) && ($past(PADDR[4],2)==0) && ($past(PADDR[3],2)==0) && ($past(PADDR[2],2)==0) && ($past(PADDR[1],2)==0) && ($past(PADDR[0],2)==0) && ($past(PWDATA[31],2)==0)
+endproperty
+
+property property_27;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (!PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (PWDATA[31]) |-> ##2 SDA_ENABLE;
+endproperty
+
+property property_28;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |-> ##2 SDA_ENABLE;
+endproperty
+
+property property_29;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |-> ##2 SDA_ENABLE;
+endproperty
+
+property property_30;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (PWDATA[31]) |-> ##2 SDA_ENABLE;
+endproperty
+
+property property_31;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (!PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (PWDATA[31]) |-> ##2  !SCL_ENABLE;
+endproperty
+
+property property_32;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |-> ##2  !SCL_ENABLE;
+endproperty
+
+property property_33;
+@(posedge PCLK)
+(!PWDATA[30]) && (!PWDATA[29]) && (!PWDATA[28]) && (!PWDATA[27]) && (!PWDATA[26]) && (!PWDATA[25]) && (!PWDATA[24]) && (!PWDATA[23]) && (!PWDATA[22]) && (!PWDATA[21]) && (!PWDATA[20]) && (!PWDATA[19]) && (!PWDATA[18]) && (!PWDATA[17]) && (!PWDATA[16]) && (!PWDATA[15]) && (!PWDATA[14]) |-> ##2  !PSLVERR;
+endproperty
+
+property property_34;
+@(posedge PCLK)
+(!PWDATA[30]) && (!PWDATA[29]) && (!PWDATA[28]) && (!PWDATA[27]) && (!PWDATA[26]) && (!PWDATA[25]) && (!PWDATA[24]) && (!PWDATA[23]) && (!PWDATA[22]) && (!PWDATA[21]) && (!PWDATA[20]) && (!PWDATA[19]) && (!PWDATA[18]) && (!PWDATA[17]) && (!PWDATA[16]) && (!PWDATA[15]) && (!PWDATA[14]) |-> ##2 INT_RX;
+endproperty
+
+property property_35;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (PSELx) && (PENABLE) |-> ##2 PREADY;
+endproperty
+
+property property_36;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (!PSELx) && (!PENABLE) |-> ##2  !PREADY;
+endproperty
+
+property property_37;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (PSELx) && (!PENABLE) |-> ##2  !PREADY;
+endproperty
+
+property property_38;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (!PSELx) && (!PENABLE) |-> ##2  !PSLVERR;
+endproperty
+
+property property_39;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (PSELx) && (!PENABLE) |-> ##2  !PSLVERR;
+endproperty
+
+property property_40;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (PSELx) && (PENABLE) |-> ##2  !PSLVERR;
+endproperty
+
+property property_41;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (!PSELx) && (!PENABLE) |-> ##2 INT_RX;
+endproperty
+
+property property_42;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (PSELx) && (!PENABLE) |-> ##2 INT_RX;
+endproperty
+
+property property_43;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (PSELx) && (PENABLE) |-> ##2 INT_RX;
+endproperty
+
+property property_44;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (PSELx) && (!PENABLE) |-> ##2 INT_TX;
+endproperty
+
+property property_45;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (PSELx) && (PENABLE) |-> ##2 INT_TX;
+endproperty
+
+property property_46;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (PSELx) && (!PENABLE) |-> ##2 SDA_ENABLE;
+endproperty
+
+property property_47;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (PSELx) && (PENABLE) |-> ##2 SDA_ENABLE;
+endproperty
+
+property property_48;
+@(posedge PCLK)
+(PRESETn) && (!PADDR[31]) && (!PADDR[30]) && (!PADDR[29]) && (!PADDR[28]) && (!PADDR[27]) && (!PADDR[26]) && (!PADDR[25]) && (!PADDR[24]) && (!PADDR[23]) && (!PADDR[22]) && (!PADDR[21]) && (!PADDR[20]) && (!PADDR[19]) && (!PADDR[18]) && (!PADDR[17]) && (!PADDR[16]) |->  !PSLVERR;
+endproperty
+
+property property_49;
+@(posedge PCLK)
+(PRESETn) && (!PADDR[31]) && (!PADDR[30]) && (!PADDR[29]) && (!PADDR[28]) && (!PADDR[27]) && (!PADDR[26]) && (!PADDR[25]) && (!PADDR[24]) && (!PADDR[23]) && (!PADDR[22]) && (!PADDR[21]) && (!PADDR[20]) && (!PADDR[19]) && (!PADDR[18]) && (!PADDR[17]) && (!PADDR[16]) |-> INT_RX;
+endproperty
+
+property property_50;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (!PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |->  !PSLVERR;
+endproperty
+
+property property_51;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (!PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (PWDATA[31]) |->  !PSLVERR;
+endproperty
+
+property property_52;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |->  !PSLVERR;
+endproperty
+
+property property_53;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |->  !PSLVERR;
+endproperty
+
+property property_54;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (PWDATA[31]) |->  !PSLVERR;
+endproperty
+
+property property_55;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (!PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |-> INT_RX;
+endproperty
+
+property property_56;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (!PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (PWDATA[31]) |-> INT_RX;
+endproperty
+
+property property_57;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |-> INT_RX;
+endproperty
+
+property property_58;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |-> INT_RX;
+endproperty
+
+property property_59;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (PWDATA[31]) |-> INT_RX;
+endproperty
+
+property property_60;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |-> INT_TX;
+endproperty
+
+property property_61;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |-> INT_TX;
+endproperty
+
+property property_62;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (PWDATA[31]) |-> INT_TX;
+endproperty
+
+property property_63;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (!PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (PWDATA[31]) |-> SDA_ENABLE;
+endproperty
+
+property property_64;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |-> SDA_ENABLE;
+endproperty
+
+property property_65;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |-> SDA_ENABLE;
+endproperty
+
+property property_66;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (PWDATA[31]) |-> SDA_ENABLE;
+endproperty
+
+property property_67;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (!PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (PWDATA[31]) |->  !SCL_ENABLE;
+endproperty
+
+property property_68;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (!PWDATA[31]) |->  !SCL_ENABLE;
+endproperty
+
+property property_69;
+@(posedge PCLK)
+(!PWDATA[30]) && (!PWDATA[29]) && (!PWDATA[28]) && (!PWDATA[27]) && (!PWDATA[26]) && (!PWDATA[25]) && (!PWDATA[24]) && (!PWDATA[23]) && (!PWDATA[22]) && (!PWDATA[21]) && (!PWDATA[20]) && (!PWDATA[19]) && (!PWDATA[18]) && (!PWDATA[17]) && (!PWDATA[16]) && (!PWDATA[15]) && (!PWDATA[14]) |->  !PSLVERR;
+endproperty
+
+property property_70;
+@(posedge PCLK)
+(!PWDATA[30]) && (!PWDATA[29]) && (!PWDATA[28]) && (!PWDATA[27]) && (!PWDATA[26]) && (!PWDATA[25]) && (!PWDATA[24]) && (!PWDATA[23]) && (!PWDATA[22]) && (!PWDATA[21]) && (!PWDATA[20]) && (!PWDATA[19]) && (!PWDATA[18]) && (!PWDATA[17]) && (!PWDATA[16]) && (!PWDATA[15]) && (!PWDATA[14]) |-> INT_RX;
+endproperty
+
+property property_71;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (PSELx) && (PENABLE) |-> PREADY;
+endproperty
+
+property property_72;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (!PSELx) && (!PENABLE) |->  !PREADY;
+endproperty
+
+property property_73;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (PSELx) && (!PENABLE) |->  !PREADY;
+endproperty
+
+property property_74;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (!PSELx) && (!PENABLE) |->  !PSLVERR;
+endproperty
+
+property property_75;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (PSELx) && (!PENABLE) |->  !PSLVERR;
+endproperty
+
+property property_76;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (PSELx) && (PENABLE) |->  !PSLVERR;
+endproperty
+
+property property_77;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (!PSELx) && (!PENABLE) |-> INT_RX;
+endproperty
+
+property property_78;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (PSELx) && (!PENABLE) |-> INT_RX;
+endproperty
+
+property property_79;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (PSELx) && (PENABLE) |-> INT_RX;
+endproperty
+
+property property_80;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (PSELx) && (!PENABLE) |-> INT_TX;
+endproperty
+
+property property_81;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (PSELx) && (PENABLE) |-> INT_TX;
+endproperty
+
+property property_82;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (PSELx) && (!PENABLE) |-> SDA_ENABLE;
+endproperty
+
+property property_83;
+@(posedge PCLK)
+(!PWDATA[13]) && (!PWDATA[12]) && (!PWDATA[11]) && (!PWDATA[10]) && (!PWDATA[9]) && (!PWDATA[8]) && (!PWDATA[7]) && (!PWDATA[6]) && (!PWDATA[5]) && (!PWDATA[4]) && (!PWDATA[3]) && (!PWDATA[2]) && (!PWDATA[1]) && (!PWDATA[0]) && (!PWRITE) && (PSELx) && (PENABLE) |-> SDA_ENABLE;
+endproperty
+
+property property_84;
+@(posedge PCLK)
+(!PADDR[15]) && (!PADDR[14]) && (!PADDR[13]) && (!PADDR[12]) && (!PADDR[11]) && (!PADDR[10]) && (!PADDR[9]) && (!PADDR[8]) && (!PADDR[7]) && (!PADDR[6]) && (!PADDR[5]) && (!PADDR[4]) && (!PADDR[3]) && (!PADDR[2]) && (!PADDR[1]) && (!PADDR[0]) && (PWDATA[31]) |-> ##[232:380] (!PREADY)&& (!PSLVERR) && (INT_RX) && (INT_TX) && (SDA_ENABLE) && (SCL_ENABLE);
+endproperty
+
+
+
+
+
+property_1_assert : assert property (property_1) else $error ("property_1 not held!");
+property_2_assert : assert property (property_2) else $error ("property_2 not held!");
+property_3_assert : assert property (property_3) else $error ("property_3 not held!");
+property_4_assert : assert property (property_4) else $error ("property_4 not held!");
+property_5_assert : assert property (property_5) else $error ("property_5 not held!");
+property_6_assert : assert property (property_6) else $error ("property_6 not held!");
+property_7_assert : assert property (property_7) else $error ("property_7 not held!");
+property_8_assert : assert property (property_8) else $error ("property_8 not held!");
+property_9_assert : assert property (property_9) else $error ("property_9 not held!");
+property_10_assert : assert property (property_10) else $error ("property_10 not held!");
+property_11_assert : assert property (property_11) else $error ("property_11 not held!");
+property_12_assert : assert property (property_12) else $error ("property_12 not held!");
+property_13_assert : assert property (property_13) else $error ("property_13 not held!");
+property_14_assert : assert property (property_14) else $error ("property_14 not held!");
+property_15_assert : assert property (property_15) else $error ("property_15 not held!");
+property_16_assert : assert property (property_16) else $error ("property_16 not held!");
+property_17_assert : assert property (property_17) else $error ("property_17 not held!");
+property_18_assert : assert property (property_18) else $error ("property_18 not held!");
+property_19_assert : assert property (property_19) else $error ("property_19 not held!");
+property_20_assert : assert property (property_20) else $error ("property_20 not held!");
+property_21_assert : assert property (property_21) else $error ("property_21 not held!");
+property_22_assert : assert property (property_22) else $error ("property_22 not held!");
+property_23_assert : assert property (property_23) else $error ("property_23 not held!");
+property_24_assert : assert property (property_24) else $error ("property_24 not held!");
+property_25_assert : assert property (property_25) else $error ("property_25 not held!");
+property_26_assert : assert property (property_26) else $error ("property_26 not held!");
+property_27_assert : assert property (property_27) else $error ("property_27 not held!");
+property_28_assert : assert property (property_28) else $error ("property_28 not held!");
+property_29_assert : assert property (property_29) else $error ("property_29 not held!");
+property_30_assert : assert property (property_30) else $error ("property_30 not held!");
+property_31_assert : assert property (property_31) else $error ("property_31 not held!");
+property_32_assert : assert property (property_32) else $error ("property_32 not held!");
+property_33_assert : assert property (property_33) else $error ("property_33 not held!");
+property_34_assert : assert property (property_34) else $error ("property_34 not held!");
+property_35_assert : assert property (property_35) else $error ("property_35 not held!");
+property_36_assert : assert property (property_36) else $error ("property_36 not held!");
+property_37_assert : assert property (property_37) else $error ("property_37 not held!");
+property_38_assert : assert property (property_38) else $error ("property_38 not held!");
+property_39_assert : assert property (property_39) else $error ("property_39 not held!");
+property_40_assert : assert property (property_40) else $error ("property_40 not held!");
+property_41_assert : assert property (property_41) else $error ("property_41 not held!");
+property_42_assert : assert property (property_42) else $error ("property_42 not held!");
+property_43_assert : assert property (property_43) else $error ("property_43 not held!");
+property_44_assert : assert property (property_44) else $error ("property_44 not held!");
+property_45_assert : assert property (property_45) else $error ("property_45 not held!");
+property_46_assert : assert property (property_46) else $error ("property_46 not held!");
+property_47_assert : assert property (property_47) else $error ("property_47 not held!");
+property_48_assert : assert property (property_48) else $error ("property_48 not held!");
+property_49_assert : assert property (property_49) else $error ("property_49 not held!");
+property_50_assert : assert property (property_50) else $error ("property_50 not held!");
+property_51_assert : assert property (property_51) else $error ("property_51 not held!");
+property_52_assert : assert property (property_52) else $error ("property_52 not held!");
+property_53_assert : assert property (property_53) else $error ("property_53 not held!");
+property_54_assert : assert property (property_54) else $error ("property_54 not held!");
+property_55_assert : assert property (property_55) else $error ("property_55 not held!");
+property_56_assert : assert property (property_56) else $error ("property_56 not held!");
+property_57_assert : assert property (property_57) else $error ("property_57 not held!");
+property_58_assert : assert property (property_58) else $error ("property_58 not held!");
+property_59_assert : assert property (property_59) else $error ("property_59 not held!");
+property_60_assert : assert property (property_60) else $error ("property_60 not held!");
+property_61_assert : assert property (property_61) else $error ("property_61 not held!");
+property_62_assert : assert property (property_62) else $error ("property_62 not held!");
+property_63_assert : assert property (property_63) else $error ("property_63 not held!");
+property_64_assert : assert property (property_64) else $error ("property_64 not held!");
+property_65_assert : assert property (property_65) else $error ("property_65 not held!");
+property_66_assert : assert property (property_66) else $error ("property_66 not held!");
+property_67_assert : assert property (property_67) else $error ("property_67 not held!");
+property_68_assert : assert property (property_68) else $error ("property_68 not held!");
+property_69_assert : assert property (property_69) else $error ("property_69 not held!");
+property_70_assert : assert property (property_70) else $error ("property_70 not held!");
+property_71_assert : assert property (property_71) else $error ("property_71 not held!");
+property_72_assert : assert property (property_72) else $error ("property_72 not held!");
+property_73_assert : assert property (property_73) else $error ("property_73 not held!");
+property_74_assert : assert property (property_74) else $error ("property_74 not held!");
+property_75_assert : assert property (property_75) else $error ("property_75 not held!");
+property_76_assert : assert property (property_76) else $error ("property_76 not held!");
+property_77_assert : assert property (property_77) else $error ("property_77 not held!");
+property_78_assert : assert property (property_78) else $error ("property_78 not held!");
+property_79_assert : assert property (property_79) else $error ("property_79 not held!");
+property_80_assert : assert property (property_80) else $error ("property_80 not held!");
+property_81_assert : assert property (property_81) else $error ("property_81 not held!");
+property_82_assert : assert property (property_82) else $error ("property_82 not held!");
+property_83_assert : assert property (property_83) else $error ("property_83 not held!");
+property_84_assert : assert property (property_84) else $error ("property_84 not held!");
